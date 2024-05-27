@@ -1,4 +1,4 @@
-name: Node-js-installed
+name: ci
 'on':
   push:
     branches:
@@ -19,6 +19,6 @@ jobs:
           cache: 'npm'
           cache-dependency-path: sudir/package-lock.json
       - name: Install dependencies
-        run: npm install 
+        run: npm ci
       - name: Run tests
         run: npm test
